@@ -9,7 +9,7 @@ function mulaiTur() {
                 intro: 'PPh 21 THR 2025 💸💰'
             },
             {
-                title: 'THR',
+                title: 'THR KOTOR',
                 element: document.querySelector('#thr'),
                 intro: 'Masukkan THR Kotor yang kamu terima.'
             },
@@ -20,7 +20,7 @@ function mulaiTur() {
                 position: 'right'
             },
             {
-                title: 'TER',
+                title: 'GAJI KOTOR',
                 element: document.querySelector('#gaji'),
                 intro: 'Masukkan Gaji Kotor yang kamu terima.',
                 position: 'left'
