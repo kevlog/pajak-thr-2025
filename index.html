@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="hikvn">
+    <meta name="description" content="Kalkulator PPh 21 - Hitung pajak penghasilan Anda dengan mudah dan cepat menggunakan kalkulator online kami.">
+    <meta name="keywords" content="Kalkulator PPh 21, Pajak Penghasilan, Perhitungan Pajak, Pajak Karyawan, Pajak Online">
+    <meta name="robots" content="index, follow">
+    
+    <title>Kalkulator PPh 21 | Hitung Pajak Penghasilan Anda</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/taxes.png" type="image/x-icon">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Kalkulator PPh 21 | Hitung Pajak Penghasilan Anda">
+    <meta property="og:description" content="Hitung pajak penghasilan Anda dengan mudah dan cepat menggunakan kalkulator online kami.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630">
+    <meta property="og:url" content="https://via.placeholder.com/1200x630">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kalkulator PPh 21 | Hitung Pajak Penghasilan Anda">
+    <meta name="twitter:description" content="Hitung pajak penghasilan Anda dengan mudah dan cepat menggunakan kalkulator online kami.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630">
+
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-5">
+    <div id="particles-js"></div>
+
+    <div class="max-w-lg p-8 rounded-xl shadow-lg bg-gray-800" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-6 text-center">Kalkulator PPh 21</h2>
+        
+        <label class="block mb-2 font-semibold text-white">THR (Gross Sebelum Pajak):</label>
+        <input id="thr" type="number" class="w-full p-3 text-gray-700 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" placeholder="Masukkan jumlah THR" oninput="hitungPPhTHR()" data-aos="fade-left">
+        
+        <label class="block mb-2 font-semibold text-white">Pilih Kategori TER:</label>
+        <select id="kategori" class="w-full p-3 text-gray-700 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" onchange="hitungPPhTHR()" data-aos="fade-right">
+            <option value="A">Kategori A</option>
+            <option value="B">Kategori B</option>
+            <option value="C">Kategori C</option>
+        </select>
+        
+        <p id="hasilTHR" class="mt-2"></p>
+        
+        <label class="block mt-5 mb-2 font-semibold text-white">Gaji Bulanan Setelah THR (Gross):</label>
+        <input id="gaji" type="number" class="w-full p-3 text-gray-700 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" placeholder="Masukkan jumlah gaji" data-aos="fade-left">
+        
+        <button onclick="hitungPPhGaji()" class="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg shadow-md font-semibold transition-all duration-300" data-aos="flip-up">Hitung PPh 21 Gaji</button>
+        <br>
+        <h3 class="text-lg font-semibold mt-4">Hasil:</h3>
+        <p id="hasilGaji" class="mt-2"></p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>

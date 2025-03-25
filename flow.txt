@@ -1,0 +1,26 @@
+Contoh simulasi ya ini :
+Seorang karyawan dengan status TK0 (Kategori A)
+
+THR saya dapat 6juta di tanggal 17
+Melihat tabel yg di share bro raymond, itu kena 0,75%. 
+Jadi pph21 nya 6.000.000 * 0.75% = 45.000
+
+Kemudian di gaji tanggal 25, saya dapat gaji 6.000.000 plus tunjangan 1.500.000 dengan total 7.500.000
+Balik lagi melihat dari tabel penghasilan yg di share jadi 7.500.000 + 6.000.000, itu masuk ke  ter 5%
+Jadi perhitungannya 13.500.000 * 5% = 675.000
+
+Jadi total pph21 yang dipotong di tanggal 25 ini adalah 675.000 - 45.000 = 630.000
+
+===
+
+1. User menginputkan THR (THR Gross sebelum pajak)
+2. User akan memilih kategori TER (A, B, atau C)
+3. Sistem menentukan presentase berdasarkan table TER
+4. Sistem menghitung THR * presentase TER lalu menyimpannya dan ditampilkan kepada user
+5. User menginputkan GAJI (gaji pokok gross) bulan ini (saat mendapatkan thr)
+6. Sistem menghitung TOTAL = THR + GAJI
+7. Sistem melihat table TER dan menentukan berapa presentase TER dari hasil hitung TOTAL
+8. Sistem menghitung TOTAL * TER dari TOTAL
+9. Lalu hasil hitung nomor 8 dikurangi dengan hasil hitung no 4
+10. Sistem menampilkan hasil hitung no 9 sebagai 'PPH 21 Gaji setelah THR'
+11. Selesa
