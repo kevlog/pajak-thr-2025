@@ -42,10 +42,10 @@ document.getElementById('gaji').addEventListener('paste', function (e) {
 // Menambahkan event listener pada inputan THR, yang akan dipicu setiap kali nilai input berubah
 // Fungsi ini akan memanggil hitungPPhTHR() jika nilai THR lebih dari 0
 document.getElementById('thr').addEventListener('input', () => {
-    let thrValue = autoThr.getNumber();  // Mendapatkan nilai THR yang sudah diformat dengan AutoNumeric
-    console.log("Nilai THR: ", thrValue);  // Menampilkan nilai THR di console untuk debugging
-    if (thrValue > 0) {  // Cek jika nilai THR lebih dari 0
-        hitungPPhTHR();  // Memanggil fungsi untuk menghitung PPh berdasarkan nilai THR
+    let thrValue = autoThr.getNumericString();  // Mengambil nilai mentah
+    console.log("Nilai THR mentah:", thrValue);
+    if (thrValue && parseInt(thrValue) > 0) {  // Pastikan ada nilai dan lebih dari 0
+        hitungPPhTHR();
     }
 });
 
