@@ -148,6 +148,7 @@ async function hitungPPhGaji() {
     let pphTHR = parseFloat(document.getElementById('hasilTHR').getAttribute("data-pphTHR")) || 0;
     let totalPPhGaji = pphTotal - pphTHR;
     
+    document.getElementById('judulHasil').innerText = `Hasil`;
     document.getElementById('hasilGaji').innerText = `PPh 21 Gaji Bulanan setelah THR: Rp ${totalPPhGaji.toLocaleString('id-ID')}`;
     showToast("Total Pajak PPh 21: Rp " + totalPPhGaji.toLocaleString('id-ID'), "success");
 }

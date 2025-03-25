@@ -13,6 +13,9 @@
     <!-- Tailwaind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Intro.js -->
+    <link href="https://cdn.jsdelivr.net/npm/intro.js/minified/introjs.min.css" rel="stylesheet">
+
     <!-- AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
@@ -51,7 +54,7 @@
 
     <div class="max-w-lg p-8 rounded-xl shadow-lg bg-gray-800" data-aos="fade-up">
         <h2 class="text-2xl font-bold mb-6 text-center">Kalkulator PPh 21</h2>
-        
+                
         <label class="block mb-2 font-semibold text-white">THR (Gross Sebelum Pajak):</label>
         <input id="thr" type="text" class="w-full p-3 text-gray-700 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" placeholder="Masukkan jumlah THR" oninput="hitungPPhTHR()" data-aos="fade-left">
         
@@ -69,11 +72,14 @@
         
         <button id="btnHitung" class="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg shadow-md font-semibold transition-all duration-300" data-aos="flip-up">Hitung PPh 21 Gaji</button>
         <br>
-        <h3 class="text-lg font-semibold mt-4">Hasil:</h3>
+        <h3 id="judulHasil" class="text-lg font-semibold mt-4"></h3>
         <p id="hasilGaji" class="mt-2"></p>
+        <button id="btnMulaiTur" class="w-full bg-green-500 hover:bg-green-600 text-white p-3 rounded-lg shadow-md font-semibold transition-all duration-300 mt-4" data-aos="flip-up">Mulai Tur</button>
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intro.js/minified/intro.min.js"></script>
+    <script src="assets/intro.js"></script>
 </body>
 </html>
