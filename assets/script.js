@@ -61,10 +61,15 @@ const autoThr = new AutoNumeric("#thr", {
 
 async function getTarifPPh(kategori, penghasilan) {
     // Pastikan penghasilan adalah angka valid
-    if (isNaN(penghasilan) || penghasilan <= 0) {
+    if (penghasilan == null || penghasilan === undefined || isNaN(penghasilan) || penghasilan <= 0) {
+        // Mencegah validasi terlalu cepat saat user baru mulai mengetik, karena ketika di akses di Google Chrome Android, langsung muncul error Penghasilan harus lebih dari 0!
+        if (penghasilan === 0 && autoThr.getNumericString().length === 0) {
+            return 0; 
+        }
+    
         showToast("Penghasilan harus lebih dari 0!", "error");
         return 0;
-    }
+    }    
 
     try {
         const response = await fetch('assets/tarif_pph.json');
