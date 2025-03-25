@@ -10,9 +10,25 @@
     
     <title>Kalkulator PPh 21 | Hitung Pajak Penghasilan Anda</title>
     
+    <!-- Tailwaind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Particles.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Auto Numeric -->
+    <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.5.4"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Toastify.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/taxes.png" type="image/x-icon">
     
@@ -37,7 +53,7 @@
         <h2 class="text-2xl font-bold mb-6 text-center">Kalkulator PPh 21</h2>
         
         <label class="block mb-2 font-semibold text-white">THR (Gross Sebelum Pajak):</label>
-        <input id="thr" type="number" class="w-full p-3 text-gray-700 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" placeholder="Masukkan jumlah THR" oninput="hitungPPhTHR()" data-aos="fade-left">
+        <input id="thr" type="text" class="w-full p-3 text-gray-700 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" placeholder="Masukkan jumlah THR" oninput="hitungPPhTHR()" data-aos="fade-left">
         
         <label class="block mb-2 font-semibold text-white">Pilih Kategori TER:</label>
         <select id="kategori" class="w-full p-3 text-gray-700 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" onchange="hitungPPhTHR()" data-aos="fade-right">
@@ -49,9 +65,9 @@
         <p id="hasilTHR" class="mt-2"></p>
         
         <label class="block mt-5 mb-2 font-semibold text-white">Gaji Bulanan Setelah THR (Gross):</label>
-        <input id="gaji" type="number" class="w-full p-3 text-gray-700 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" placeholder="Masukkan jumlah gaji" data-aos="fade-left">
+        <input id="gaji" type="text" class="w-full p-3 text-gray-700 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none mb-4" placeholder="Masukkan jumlah gaji" data-aos="fade-left">
         
-        <button onclick="hitungPPhGaji()" class="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg shadow-md font-semibold transition-all duration-300" data-aos="flip-up">Hitung PPh 21 Gaji</button>
+        <button id="btnHitung" class="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg shadow-md font-semibold transition-all duration-300" data-aos="flip-up">Hitung PPh 21 Gaji</button>
         <br>
         <h3 class="text-lg font-semibold mt-4">Hasil:</h3>
         <p id="hasilGaji" class="mt-2"></p>
