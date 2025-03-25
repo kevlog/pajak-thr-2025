@@ -13,6 +13,20 @@ function showToast(message, type = "success") {
     }).showToast();
 }
 
+const autoGaji = new AutoNumeric("#gaji", { 
+    digitGroupSeparator: ".", 
+    decimalCharacter: ",", 
+    currencySymbol: "Rp ", 
+    unformatOnSubmit: true 
+});
+
+const autoThr = new AutoNumeric("#thr", { 
+    digitGroupSeparator: ".", 
+    decimalCharacter: ",", 
+    currencySymbol: "Rp ", 
+    unformatOnSubmit: true 
+});
+
 // Pastikan PPh THR dihitung ulang saat kategori berubah
 document.getElementById("kategori").addEventListener("change", async function () {
     await new Promise(resolve => setTimeout(resolve, 50)); // Beri waktu AutoNumeric membaca input
@@ -42,11 +56,9 @@ document.getElementById('gaji').addEventListener('paste', function (e) {
 // Menambahkan event listener pada inputan THR, yang akan dipicu setiap kali nilai input berubah
 // Fungsi ini akan memanggil hitungPPhTHR() jika nilai THR lebih dari 0
 document.getElementById('thr').addEventListener('input', () => {
-    let thrValue = autoThr.getNumber();  // Mendapatkan nilai yang diformat oleh AutoNumeric
-    console.log("Nilai THR:", thrValue);
-    
+    let thrValue = autoThr.getNumber().toString().length;  // Mendapatkan nilai yang diformat oleh AutoNumeric
     // Pastikan nilai THR valid dan lebih dari 0
-    if (!isNaN(thrValue) && thrValue > 0 && thrValue.toString().length > 7) {
+    if (thrValue > 1) {
         hitungPPhTHR();
     }
 });
@@ -56,20 +68,6 @@ document.getElementById('thr').addEventListener('input', () => {
 document.getElementById('btnHitung').addEventListener('click', async function () {
     await new Promise(resolve => setTimeout(resolve, 100)); // Pastikan nilai AutoNumeric sudah siap
     hitungPPhGaji(); // Jalankan perhitungan setelah nilai sudah benar
-});
-
-const autoGaji = new AutoNumeric("#gaji", { 
-    digitGroupSeparator: ".", 
-    decimalCharacter: ",", 
-    currencySymbol: "Rp ", 
-    unformatOnSubmit: true 
-});
-
-const autoThr = new AutoNumeric("#thr", { 
-    digitGroupSeparator: ".", 
-    decimalCharacter: ",", 
-    currencySymbol: "Rp ", 
-    unformatOnSubmit: true 
 });
 
 async function getTarifPPh(kategori, penghasilan) {
