@@ -42,12 +42,14 @@ document.getElementById('gaji').addEventListener('paste', function (e) {
 // Menambahkan event listener pada inputan THR, yang akan dipicu setiap kali nilai input berubah
 // Fungsi ini akan memanggil hitungPPhTHR() jika nilai THR lebih dari 0
 document.getElementById('thr').addEventListener('input', () => {
-    let thrValue = autoThr.getNumericString();  // Mengambil nilai mentah
-    console.log("Nilai THR mentah:", thrValue);
-    if (thrValue && parseInt(thrValue) > 0) {  // Pastikan ada nilai dan lebih dari 0
+    let thrValue = autoThr.getNumber();
+    console.log("Nilai THR:", thrValue);    
+    // Pastikan thrValue bukan NaN dan lebih besar dari 0
+    if (!isNaN(thrValue) && thrValue > 0) {
         hitungPPhTHR();
     }
 });
+
 
 // Event listener untuk tombol Hitung
 document.getElementById('btnHitung').addEventListener('click', async function () {
