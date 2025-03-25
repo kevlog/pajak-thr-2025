@@ -22,7 +22,7 @@ function mulaiTur() {
             {
                 title: 'GAJI KOTOR',
                 element: document.querySelector('#gaji'),
-                intro: 'Masukkan Gaji Kotor yang kamu terima.',
+                intro: 'Masukkan "Gaji Bulanan Gross/Sebelum Kena Pajak" yang kamu terima setelah mendapatkan THR.',
                 position: 'left'
             },
             {
